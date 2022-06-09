@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hotel_name: MyText
+  adults_num: 1
+  childre_num: 1
+  check_in: 2022-06-09
+  check_out: 2022-06-09
+  room_name: 1
+
+two:
+  hotel_name: MyText
+  adults_num: 1
+  childre_num: 1
+  check_in: 2022-06-09
+  check_out: 2022-06-09
+  room_name: 1

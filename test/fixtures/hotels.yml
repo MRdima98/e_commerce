@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  IVA: 1
+  stars_num: 1
+  room_cost: 1
+  options: MyText
+  description: MyText
+
+two:
+  name: MyString
+  IVA: 1
+  stars_num: 1
+  room_cost: 1
+  options: MyText
+  description: MyText
