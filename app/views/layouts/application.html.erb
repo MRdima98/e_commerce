@@ -3,14 +3,18 @@
   <head>
     <title>ECommerce</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag "application.css" %>  
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   </head>
 
   <body>
+  <%unless current_page?("/home_page")%>
+    <%= render "layouts/navbar" %>
+  <%end%>
     <%= yield %>
   </body>
 </html>
