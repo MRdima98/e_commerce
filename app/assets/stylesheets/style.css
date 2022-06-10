@@ -210,7 +210,11 @@ body {
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 }
 
-.anchor_button{
-    background-color: #2063a5;
-    padding: 10px 25px;
+.center-text{
+    line-height: 32.5px !important;
+}
+
+.img-size{
+    width: 200px;
+    height: 200px;
 }
