@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Hotels</h1>
 
-<div id="hotels">
-  <% @hotels.each do |hotel| %>
-    <%= render hotel %>
-    <p>
-      <%= link_to "Show this hotel", hotel%>
-    </p>
-  <% end %>
-</div>
+<% @hotels.each do |hotel| %>
+  <%= render hotel %>
+  <p>
+    <%= link_to "Show this hotel", hotel, class:"btn btn-lg btn-primary "%>
+  </p>
+<% end %>
 
-<%= link_to "Register your structure", new_hotel_path %>
+<%= link_to "Aggiungi hotel", new_hotel_path, class:"btn btn-lg btn-primary light-top-margin" %>
+
+

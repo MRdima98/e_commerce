@@ -11,10 +11,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   </head>
 
-  <body>
+  <body >
   <%unless current_page?("/home_page") or current_page?("/")%>
     <%= render "layouts/navbar" %>
+    <div id="hotels" class="container-fluid register-width big-text">
+      <%= yield %>
+    </div>
   <%end%>
+
+  <%if current_page?("/home_page") or current_page?("/")%>
     <%= yield %>
+  <%end%>
+
   </body>
 </html>
