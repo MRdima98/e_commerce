@@ -1,0 +1,46 @@
+<%= form_with(model: hotel) do |form| %>
+  <% if hotel.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(hotel.errors.count, "error") %> prohibited this hotel from being saved:</h2>
+
+      <ul>
+        <% hotel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="register" class="container-fluid register-width">
+    <div class="form-floating col-lg-6 base-height light-top-margin">
+      <%= form.text_field :name, class:"my-form-control", placeholder:"Nome Hotel"%>
+    </div>
+
+    <div class="form-floating col-lg-6 base-height light-top-margin">
+      <%= form.number_field :IVA, class:"my-form-control", placeholder:"IVA"%>
+    </div>
+
+    <div class="form-floating col-lg-6 base-height light-top-margin">
+      <%= form.number_field :stars_num, class:"my-form-control",placeholder:"stars number" %>
+    </div>
+
+    <div class="form-floating col-lg-6 base-height light-top-margin">
+      <%= form.number_field :room_cost, class:"my-form-control", placeholder:"room cost" %>
+    </div>
+
+    <div class="form-floating col-lg-12 base-height light-top-margin">
+      <%= form.text_area :options, class:"my-form-control", placeholder:"options" %>
+    </div>
+
+    <div class="form-floating col-lg-12 base-height light-top-margin">
+      <%= form.text_area :description, class:"my-form-control", placeholder:"description" %>
+    </div>
+
+    <div class="form-floating col-lg-12 base-height light-top-margin">
+      <%if current_page?("/hotels/new")%>
+        <%= link_to "Back to hotels", hotels_path, class:"btn btn-lg btn-danger col-lg-4 col-lg-offset-1 light-top-margin" %>
+      <%end%>
+      <%= button_to "Inserisci", false, class:"btn btn-lg btn-primary col-lg-4 col-lg-offset-2 light-top-margin"%>
+    </div>
+  </div>
+<% end %>

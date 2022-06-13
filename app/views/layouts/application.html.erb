@@ -12,7 +12,7 @@
   </head>
 
   <body>
-  <%unless current_page?("/home_page")%>
+  <%unless current_page?("/home_page") or current_page?("/")%>
     <%= render "layouts/navbar" %>
   <%end%>
     <%= yield %>
