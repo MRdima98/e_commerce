@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root "home_page#index"
-  resources :home_page
+  root "homes#index"
+  resources :homes
   resources :logins
   resources :prenotations
   resources :hotels

@@ -8,12 +8,12 @@
   <%half_row_no_margin="col-lg-12"%>
 <% end %>
 
-<form action="/home_page/%2Fhome_page" method="GET">
+<form action="/homes/1?name=a" method="GET">
   <div class="row">
     <div class="<%=little_more_than_half%>" >
       <div class="form-group base-height" id="holder-1" > 
         <small id="label" for="input">Dove andiamo?</small>
-        <input input type="text" class="my-form-control input" name="palce"  class="my-form-control input" required/>
+        <input input type="text" class="my-form-control input" name="search"  class="my-form-control input" />
       </div>
     </div>  
   </div>
@@ -22,13 +22,13 @@
     <div class="<%=half_row%>">
       <div class="form-group base-height" id="holder-2"> 
         <small id="label" for="input">Partenza</small>
-        <input id="datepicker" type="date" class="my-form-control input" required>
+        <input id="datepicker" type="date" class="my-form-control input" >
       </div>
     </div>
     <div class="<%=half_row_no_margin%>">
       <div class="form-group base-height" id="holder-2"> 
         <small id="label" for="input">Ritorno</small>
-        <input id="datepicker" type="date" class="my-form-control input" required>
+        <input id="datepicker" type="date" class="my-form-control input" >
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
     <div class="<%=half_row%>">
       <div class="form-group base-height" id="holder-2"> 
         <small id="label" for="input">Quante persone?</small>
-        <input type="text" class="my-form-control input" required>
+        <input type="text" class="my-form-control input" >
       </div>
     </div>
     <div class="<%=half_row_no_margin%>">
@@ -47,3 +47,4 @@
     </div>
   </div>
 </form>
+

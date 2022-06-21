@@ -32,7 +32,7 @@
       <%= render "layouts/navbar" %>
       <%= yield %>
       </div>
-    <%elsif current_page?("/home_page/%2Fhome_page") %> 
+    <%elsif current_page?(home_path) %> 
       <%= render "layouts/navbar" %>
       <%= yield %>
     <%else%>
