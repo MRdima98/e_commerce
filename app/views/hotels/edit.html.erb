@@ -1,5 +1,9 @@
-<h1>Editing hotel</h1>
 <%= render "form", hotel: @hotel %>
-<%= link_to "Show this hotel", @hotel,class:"btn btn-lg btn-primary light-top-margin"  %> |
-<%= link_to "Back to hotels", hotels_path,class:"btn btn-lg btn-primary light-top-margin"  %>
+
+<div  class="container-fluid register-width light-top-margin">
+  <div class="form-floating col-lg-12 base-height ">
+    <%= link_to "Back to hotels", hotels_path,class:"btn btn-lg col-lg-3 btn-primary "%>
+    <%= link_to "Show this hotel", @hotel,class:"btn btn-lg col-lg-3 btn-primary light-left-margin"  %> 
+  </div>
+</div>
 

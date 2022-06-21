@@ -1,13 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th scope=col>Nome Hotel</th>
+      <th scope=col>Info</th>
+    </tr>
+</thead>  
+<tbody>
+<%count=0%>
 <% @hotels.each do |hotel| %>
-  <%= render hotel %>
-  <p>
-    <%= link_to "Show this hotel", hotel, class:"btn btn-lg btn-primary "%>
-  </p>
+  <tr> 
+    <th scope="row"><%=count=count+1%></th>
+    <td><%= render hotel %></td>
+    <td><%= link_to "Vedi", hotel, class:"btn btn-primary "%></td>
+  </tr>
 <% end %>
-
-<%= link_to "Aggiungi hotel", new_hotel_path, class:"btn btn-lg btn-primary light-top-margin" %>
-
+  <tr>
+    <th scope="row"><%=count=count+1%></th>
+    <td><%= link_to "Aggiungi hotel", new_hotel_path, class:"btn btn-lg btn-primary "%></td>
+  </tr>
+</tbody>
 

@@ -1,0 +1,44 @@
+<div class="find-section container ">
+  <div id="filters" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    <%= render "search" %>
+    <div id="secondary-filters" class="col-lg-12 thin-border light-top-margin">
+      <div class="row bottom-border">
+        <h4 id="filtra-per" class="light-left-margin filter-font-titles">Filtra per:</h4>
+      </div>
+      <div class="row">
+        <div class="top-border"></div>
+        <h4 class="light-left-margin filter-font-titles-secondary">Servizi</h4>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <input type="checkbox" class="light-left-margin checkbox-dim">
+          <span class="filter-font">Palestra</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="top-border"></div>
+        <h4 class="light-left-margin filter-font-titles-secondary">Stelle</h4>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+<% @hotels.each do |hotel| %>
+  <div class="row light-bottom-margin">
+    <div id="single-search-result" class="col-lg-12 thin-border">
+      <div class="col-lg-4 light-top-bot-margin">
+        <%= image_tag "home_page.png", width:'100%', height:'150'%> 
+      </div>
+      <div class="col-lg-6 light-top-bot-margin">
+        <%=hotel.name%>
+      </div>
+        <div class="col-lg-2 light-top-bot-margin">
+          <span><%=hotel.room_cost%>$</span>
+          <button class="btn-lg ">
+            Prenota
+          </button>
+        </div>
+    </div>
+  </div>
+<% end %>
+</div>

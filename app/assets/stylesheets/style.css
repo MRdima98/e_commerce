@@ -110,7 +110,7 @@ body {
 }
 
 .light-top-margin{
-    margin-top: 15px;
+    margin-top: 15px !important;
 
 }
 
@@ -233,4 +233,18 @@ input[type=number] {
 
 .big-text{
     font-size: 20px;
+}
+
+.transparent-hero{
+    background-color: transparent !important;
+}
+
+.medium-left-margin{
+    margin-left: 30px;
+}
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+    color: transparent;
 }

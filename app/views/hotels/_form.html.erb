@@ -28,6 +28,10 @@
       <%= form.number_field :room_cost, class:"my-form-control", placeholder:"room cost" %>
     </div>
 
+    <div class="form-floating col-lg-6 base-height light-top-margin">
+      <%= form.number_field :num_rooms, class:"my-form-control", placeholder:"number of rooms" %>
+    </div>
+
     <div class="form-floating col-lg-12 base-height light-top-margin">
       <%= form.text_area :options, class:"my-form-control", placeholder:"options" %>
     </div>
@@ -38,9 +42,10 @@
 
     <div class="form-floating col-lg-12 base-height light-top-margin">
       <%if current_page?("/hotels/new")%>
-        <%= link_to "Back to hotels", hotels_path, class:"btn btn-lg btn-danger col-lg-4 col-lg-offset-1 light-top-margin" %>
+        <%= link_to "Back to hotels", hotels_path, class:"btn btn-lg btn-primary col-lg-3 light-top-margin" %>
       <%end%>
-      <%= button_to "Inserisci", false, class:"btn btn-lg btn-primary col-lg-4 col-lg-offset-2 light-top-margin"%>
+
+      <%= button_to "Inserisci", false, class:"btn btn-lg btn-primary col-lg-3 light-top-margin light-left-margin"%>
     </div>
   </div>
 <% end %>

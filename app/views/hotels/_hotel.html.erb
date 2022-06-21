@@ -1,32 +1,41 @@
-<div id="<%= dom_id hotel %>" >
-  <p>
-    <strong>Name:</strong>
-    <%= hotel.name %>
-  </p>
+<% if current_page?("/hotels") %>
+  <%= hotel.name %>
+<% else %>
+  <div id="<%= dom_id hotel %>" >
+    <p>
+      <strong>Name:</strong>
+      <%= hotel.name %>
+    </p>
 
-  <p>
-    <strong>Iva:</strong>
-    <%= hotel.IVA %>
-  </p>
+    <p>
+      <strong>Iva:</strong>
+      <%= hotel.IVA %>
+    </p>
 
-  <p>
-    <strong>Stars num:</strong>
-    <%= hotel.stars_num %>
-  </p>
+    <p>
+      <strong>Stars num:</strong>
+      <%= hotel.stars_num %>
+    </p>
 
-  <p>
-    <strong>Room cost:</strong>
-    <%= hotel.room_cost %>
-  </p>
+    <p>
+      <strong>Room cost:</strong>
+      <%= hotel.room_cost %>
+    </p>
 
-  <p>
-    <strong>Options:</strong>
-    <%= hotel.options %>
-  </p>
+    <p>
+      <strong>How many rooms:</strong>
+      <%= hotel.num_rooms %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= hotel.description %>
-  </p>
+    <p>
+      <strong>Options:</strong>
+      <%= hotel.options %>
+    </p>
 
-</div>
+    <p>
+      <strong>Description:</strong>
+      <%= hotel.description %>
+    </p>
+
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<% if current_page?("/") %>
+  <%half_row="col-lg-offset-2 col-lg-4" %>
+  <%half_row_no_margin="col-lg-4"%>
+  <%little_more_than_half="col-lg-offset-2 col-lg-8"%>
+<% else %>
+  <%half_row="col-lg-12" %>
+  <%little_more_than_half="col-lg-12"%>
+  <%half_row_no_margin="col-lg-12"%>
+<% end %>
+
+<form action="/home_page/%2Fhome_page" method="GET">
+  <div class="row">
+    <div class="<%=little_more_than_half%>" >
+      <div class="form-group base-height" id="holder-1" > 
+        <small id="label" for="input">Dove andiamo?</small>
+        <input input type="text" class="my-form-control input" name="search"  class="my-form-control input"/>
+      </div>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="<%=half_row%>">
+      <div class="form-group base-height" id="holder-2"> 
+        <small id="label" for="input">Partenza</small>
+        <input id="datepicker" type="date" class="my-form-control input">
+      </div>
+    </div>
+    <div class="<%=half_row_no_margin%>">
+      <div class="form-group base-height" id="holder-2"> 
+        <small id="label" for="input">Ritorno</small>
+        <input id="datepicker" type="date" class="my-form-control input">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="<%=half_row%>">
+      <div class="form-group base-height" id="holder-2"> 
+        <small id="label" for="input">Quante persone?</small>
+        <input type="text" class="my-form-control input">
+      </div>
+    </div>
+    <div class="<%=half_row_no_margin%>">
+      <div id="holder-2" class="form-group" >
+        <input type="submit" value="CERCA" class="btn btn-lg active btn-block button-color base-height center-text">
+      </div>
+    </div>
+  </div>
+</form>

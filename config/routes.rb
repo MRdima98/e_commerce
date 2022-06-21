@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root "home_page#index"
-  get "/home_page", to: "home_page#index"
-  get "/login", to: "login#index"
-  get "/register", to:"login#register"
-  get "/mie_prenotazioni", to:"prenotation#mie_prenotazioni"
-  get "/search", to:"home_page#search"
+  resources :home_page
+  resources :logins
+  resources :prenotations
   resources :hotels
+  resources :registers
+  resources :rooms
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

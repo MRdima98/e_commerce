@@ -1,20 +1,23 @@
-<div class="hero-banner">
+<%if current_page?("")%>
+<%nav_style="transparent-hero"%>
+<%else%>
+<%nav_style="hero-banner"%>
+<%end%>
+<div class="<%=nav_style%>">
   <div class="container">
-    <div class="row header">
-        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 top-nav ">
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 top-nav" >
-          <%= link_to "HOTELS","http://127.0.0.1:3000", class:"links"%>
-        </div>
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 top-nav">
-          <a href="mie_prenotazioni" class="links">Mie Prenotazioni</a>
-          <span>|</span>
-          <a href="registra_struttura" class="links">Registra la tua struttura </a>
-          <span>|</span>
-          <a href="register" class="links">Registrati</a>
-          <span>|</span>
-          <a href="login.html" class="links">Accedi</a>
-        </div>
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 top-nav ">
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 top-nav" >
+      <%= link_to "HOTELS",root_path, class:"links"%>
+    </div>
+    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 top-nav">
+      <%= link_to 'Mie prenotazioni',prenotations_path,class:"links" %>
+      <span>|</span>
+      <%= link_to "Registra la tua struttura",hotels_path, class:"links"%>
+      <span>|</span>
+      <%= link_to 'Registrati',registers_path, class:"links" %>
+      <span>|</span>
+      <%= link_to 'Login', logins_path,class:"links" %>
     </div>
   </div>
 </div>

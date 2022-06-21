@@ -3,7 +3,8 @@ class HotelsController < ApplicationController
 
   # GET /hotels or /hotels.json
   def index
-    @hotels = Hotel.all
+    # @hotels = Hotel.all
+    @hotels = Hotel.search(params[:search])
   end
 
   # GET /hotels/1 or /hotels/1.json
@@ -25,7 +26,7 @@ class HotelsController < ApplicationController
 
     respond_to do |format|
       if @hotel.save
-        format.html { redirect_to hotel_url(@hotel), notice: "Hotel was successfully created." }
+        format.html { redirect_to rooms_path, notice: "Hotel was successfully created." }
         format.json { render :show, status: :created, location: @hotel }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +66,7 @@ class HotelsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def hotel_params
-      params.require(:hotel).permit(:name, :IVA, :stars_num, :room_cost, :options, :description)
+      params.require(:hotel).permit(:name, :IVA, :stars_num, :room_cost, :options, :description, :num_rooms)
     end
+
 end

@@ -8,20 +8,41 @@
     <%= csp_meta_tag %>
     <%= javascript_importmap_tags %>
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker1" ).datepicker();
+    } );
+    </script>
+    <script>
+    $( function() {
+      $( "#datepicker2" ).datepicker();
+    } );
+    </script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   </head>
 
   <body >
-  <%unless current_page?("/home_page") or current_page?("/")%>
-    <%= render "layouts/navbar" %>
-    <div id="hotels" class="container-fluid register-width big-text">
+    <%if current_page?("")%>
+      <div class="hero grid-main">
+      <%= render "layouts/navbar" %>
       <%= yield %>
-    </div>
-  <%end%>
-
-  <%if current_page?("/home_page") or current_page?("/")%>
-    <%= yield %>
-  <%end%>
-
+      </div>
+    <%elsif current_page?("/home_page/%2Fhome_page") %> 
+      <%= render "layouts/navbar" %>
+      <%= yield %>
+    <%else%>
+      <%= render "layouts/navbar" %>
+      <div class="container-fluid register-width big-text">
+      <%= yield %>
+      </div> 
+    <%end%>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
+
